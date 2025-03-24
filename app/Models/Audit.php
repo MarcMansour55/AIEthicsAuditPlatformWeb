@@ -12,6 +12,14 @@ class Audit extends Model
             'notes'
 ];
 
+    public function Dataset()
+    {
+        return $this->belongsTo(Dataset::class);
+    }
+    public function Biasmetrics()
+    {
+        return $this->hasMany(Biasmetric::class);
+    }
     use HasFactory;
 
 }
