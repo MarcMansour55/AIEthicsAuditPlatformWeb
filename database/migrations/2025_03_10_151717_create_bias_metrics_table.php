@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('bias_metrics', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('audit_id')->constrained('audits');
+            $table->foreignId('audit_id')->constrained('audits', 'audit_id')->onDelete('cascade');
             $table->string('metric_name');
             $table->float('metric_value');
             $table->timestamps();

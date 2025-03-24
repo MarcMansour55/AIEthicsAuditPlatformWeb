@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('reports', function (Blueprint $table) {
             $table->id('report_id');
-            $table->foreignId('dataset_id')->constrained('data_set');
+            $table->foreignId('dataset_id')->constrained('data_sets');
             $table->timestamp('generated_date');
             $table->string('complience_status');
             $table->string('pdf_path');
