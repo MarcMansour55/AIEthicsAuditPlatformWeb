@@ -14,5 +14,18 @@ class Dataset extends Model
             'file_size'
 ];
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    public function audits()
+    {
+        return $this->hasMany(Audit::class);
+    }
+    public function reports()
+    {
+        return $this->hasMany(Report::class);
+    }
+
     use HasFactory;
 }

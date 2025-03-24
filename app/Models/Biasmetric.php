@@ -7,8 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Biasmetric extends Model
 {
-    protected $fillables=['metric_name',
+    protected $fillable=['metric_name',
                 'metric_value'
 ];
+
+public function report()
+{
+    return $this->belongsTo(Report::class);
+}
     use HasFactory;
+
 }

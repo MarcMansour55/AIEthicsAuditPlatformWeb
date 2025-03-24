@@ -11,5 +11,11 @@ class Report extends Model
         'complience_status',
         'pdf_path'
 ];
+
+    public function dataset()
+    {
+        return $this->belongsTo(Dataset::class);
+
+    }
     use HasFactory;
 }
