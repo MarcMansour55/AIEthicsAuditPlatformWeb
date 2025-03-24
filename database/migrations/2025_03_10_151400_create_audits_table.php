@@ -13,13 +13,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('audits', function (Blueprint $table) {
-            $table->id('audit_id');
-            $table->foreignId('dataset_id')->Constrained('data_set');
-            $table->timestamps('Analysis_date');
-            $table->string('status');
-            $table->string('notes');
+                $table->id('audit_id');
+                $table->foreignId('dataset_id')->constrained('data_sets');
+                $table->timestamp('Analysis_date');
+                $table->string('status');
+                $table->string('notes');
+                $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.

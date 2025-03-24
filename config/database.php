@@ -35,19 +35,19 @@ return [
 
     'connections' => [
 
-        'sqlite' => [
+       /* 'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
-
-      /*  'mysql' => [
+*/
+            'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
+            'port' => env('DB_PORT', '3307'),
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
@@ -62,8 +62,8 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
-*/
-        
+
+ /*       
 'sqlite' => [
     'driver' => 'sqlite',
     'url' => env('DATABASE_URL'),
@@ -71,7 +71,7 @@ return [
     'prefix' => '',
     'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
 ],
-
+*/
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
